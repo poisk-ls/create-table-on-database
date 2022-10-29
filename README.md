@@ -26,7 +26,8 @@ USE <database_name>;
 >delivery | INT | NO | | 0000-00-00| |
 >supplier_id | INT | NO | | 0 | |
 
->**Then INSERT INTO <table_name>;**
+>Then **INSERT INTO <table_name>;**
+>
 >INSERT INTO Supplier VALUES(1, 'J&T', 101);
 >
 
