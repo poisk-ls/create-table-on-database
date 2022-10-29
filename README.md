@@ -2,31 +2,41 @@
 
 ## This is how to create table using terminal
 
->**First CREATE DATABASE**
+>**Firstly open Termux then type this cmd (mysqld_safe -u root)**
+>**and the slide on left the open new session and after that type this cmd (mysql)**
+
+>**Secondly**
+>**CREATE DATABASE**
+>
 >CREATE DATABASE <database_name>;
 
 USE <database_name>;
 
-**CREATE TABLE <table_name>;**
+>**CREATE TABLE <table_name>;**
+>
 >CREATE TABLE `Supplier`( `delivery_id` INT NOT NULL DEFAULT '0', `delivery` DATE NOT NULL DEFAULT '0000-00-00', `supplier_id` INT NOT NULL DEFAULT '0', primary key(`delivery_id`) );
 
 **Result**
 
-DESC Supplier;
+>DESC Supplier;
+>
 >Field | Type | Null | Key | Default | Extra |
 >-- |--|--| --| --| --|
 >delivery_id | INT | NO | PRI|0 | |
 >delivery | INT | NO | | 0000-00-00| |
 >supplier_id | INT | NO | | 0 | |
 
-**Then INSERT INTO <table_name>;**
-INSERT INTO Supplier VALUES(1, 'J&T', 101);
+>**Then INSERT INTO <table_name>;**
+>INSERT INTO Supplier VALUES(1, 'J&T', 101);
+>
 
-SELECT * FROM Supplier;
+>SELECT * FROM Supplier;
 **Result**
+
 delivery_id | delivery | supplier_id |
 -- |--|--|
 1 | J&T | 101
+
 ##
 
 **[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=26&pause=1000&color=F7D628&center=false&width=435&lines=...enjoy!!)](https://git.io/typing-svg)**
