@@ -7,29 +7,29 @@
 
 >**Secondly**
 >**CREATE DATABASE**
->
+
 >CREATE DATABASE <database_name>;
 
 USE <database_name>;
 
 >**CREATE TABLE <table_name>;**
->
+
 >CREATE TABLE `Supplier`( `delivery_id` INT NOT NULL DEFAULT '0', `delivery` DATE NOT NULL DEFAULT '0000-00-00', `supplier_id` INT NOT NULL DEFAULT '0', primary key(`delivery_id`) );
 
 **Result**
 
 >DESC `Supplier`;
->
->Field | Type | Null | Key | Default | Extra |
->-- |--|--| --| --| --|
->delivery_id | INT | NO | PRI|0 | |
->delivery | INT | NO | | 0000-00-00| |
->supplier_id | INT | NO | | 0 | |
+
+Field | Type | Null | Key | Default | Extra |
+-- |--|--| --| --| --|
+delivery_id | INT(11) | NO | PRI|0 | |
+delivery | INT(11) | NO | | 0000-00-00| |
+supplier_id | INT(11) | NO | | 0 | |
 
 >Then **INSERT INTO <table_name>;**
->
+
 >INSERT INTO Supplier VALUES(1, 'J&T', 101);
->
+
 
 >SELECT * FROM Supplier;
 **Result**
@@ -38,36 +38,38 @@ delivery_id | delivery | supplier_id |
 -- |--|--|
 1 | J&T | 101
 
+##
 
 >CREATE TABLE `department`( `dep_id` INT NOT NULL DEFAULT '0',`dep_name` VARCHAR(20) NOT NULL DEFAULT '', `dep_location` VARCHAR(15) NOT NULL DEFAULT '', PRIMARY KEY(`dep_id`));
 
 **Result**
 
 >DESC `department`;
->
->Field | Type | Null | Key | Default | Extra |
->-- |--|--| --| --| --|
->dep_id | INT(11) | NO | PRI|0 | |
->dep_name | VARCHAR(20) | NO | | | |
->dep_location | VARCHAR(15) | NO | | | |
 
+Field | Type | Null | Key | Default | Extra |
+-- |--|--| --| --| --|
+dep_id | INT(11) | NO | PRI|0 | |
+dep_name | VARCHAR(20) | NO | | | |
+dep_location | VARCHAR(15) | NO | | | |
 
+##
 
 >CREATE TABLE `employees`( `emp_id` INT NOT NULL DEFAULT '0',`emp_name` VARCHAR(15) NOT NULL DEFAULT '',`job_name` VARCHAR(10) NOT NULL DEFAULT '',`manager_id`  INT NOT NULL DEFAULT '0', `hire_date` DATE NOT NULL DEFAULT '0000-00-00', `salary` DECIMAL(10,2) NOT NULL DEFAULT '0.00', `commision` DECIMAL(7,2) NOT NULL DEFAULT '0.00', `dep_id`INT NOT NULL DEFAULT '0', PRIMARY KEY(`emp_id`) );
 
 **Result**
 
 >DESC `employees`;
->
->Field | Type | Null | Key | Default | Extra |                        >-- |--|--| --| --| --|
->emp_id | INT(11) | NO | PRI|0 | |
->emp_name | VARCHAR(20) | NO | | | |
->job_name | VARCHAR(15) | NO | | | |
->manager_id | INT(11) | NO | PRI|0 | |
->hire_date | DATE | NO | |0000-00-00 | |
->salary | DECIMAL(10,2) | NO | |0.00 | |
->commision | DECIMAL(7,2) | NO | |0.00 | |
->dep_id | INT(11) | NO | |0 | |
+
+Field | Type | Null | Key | Default | Extra |                        
+-- |--|--| --| --| --|
+emp_id | INT(11) | NO | PRI |0 | |
+emp_name | VARCHAR(20) | NO | | | |
+job_name | VARCHAR(15) | NO | | | |
+manager_id | INT(11) | NO | PRI |0 | |
+hire_date | DATE | NO | |0000-00-00 | |
+salary | DECIMAL(10,2) | NO | |0.00 | |
+commision | DECIMAL(7,2) | NO | |0.00 | |
+dep_id | INT(11) | NO | MUL |0 | |
 
 
 ##
